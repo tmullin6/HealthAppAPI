@@ -3,9 +3,9 @@ require('dotenv').config();
 
 const app = express();
 
-app.get("/",(req,res)=>{
-    res.send("Hello World I am Working")
-})
+const apiRouter = require("./routes/api");
+
+app.use("/api",apiRouter);
 
 app.listen(process.env.PORT,()=>{
     console.log("Server Running...");

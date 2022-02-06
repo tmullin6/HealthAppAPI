@@ -5,7 +5,7 @@ const apiController = require("../controllers/apiController");
 
 api.get("/",apiController.index);
 
-api.get("/user/:id",apiController.getUser);
+api.get("/user/:id",apiController.user_get);
 
 api.post("/login",apiController.login_post);
 
